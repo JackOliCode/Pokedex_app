@@ -3,6 +3,11 @@ font-family: 'Exo', sans-serif;
 
 */
 
+:root {
+	--pokemon-red: #e4000f;
+	--border-yellow: #ffcb05;
+	--pokemon-blue: #3b4cca;
+}
 
 
 * {
@@ -12,10 +17,17 @@ font-family: 'Exo', sans-serif;
 body {
     font-family: 'Exo', sans-serif;
     margin: 0 auto;
+	color: var(--pokemon-blue);
+	/* border: 5px solid var(--border-yellow); */
+	line-height: 1.6;
 }
 
 h1 {
     font-family: 'Exo', sans-serif;
+}
+ 
+.main-container {
+	height: 100vh;
 }
 
 .page-header {
@@ -24,7 +36,15 @@ h1 {
 	width: 100%;
 	padding: 20px;
 	margin: 0;
-	border-bottom: 2px solid darkblue;
-	background: #e4000f;
+	border-bottom: 5px solid var(--border-yellow);
+	background: var(--pokemon-red);
 }
 
+.page-footer {
+	clear: both;
+	display: flex;
+	background-color: var(--pokemon-red);
+	position: sticky;
+	top: 100%;
+	border-top: 5px solid var(--border-yellow);
+}
