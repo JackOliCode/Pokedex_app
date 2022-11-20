@@ -3,14 +3,28 @@ font-family: 'Exo', sans-serif;
 
 */
 
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Exo', sans-serif;
+    margin: 0 auto;
 }
 
 h1 {
     font-family: 'Exo', sans-serif;
 }
+
+.page-header {
+    clear: both;
+	display: flex;
+	width: 100%;
+	padding: 20px;
+	margin: 0;
+	border-bottom: 2px solid darkblue;
+	background: #e4000f;
+}
+
