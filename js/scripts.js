@@ -1,4 +1,4 @@
-/* 
+
 let pokemonList = [
     {name: 'Bulbasaur', height: 0.7, type: ['grass', 'poison']},
     {name: 'Ivysaur', height: 1.0, type: ['grass', 'poison']},
@@ -9,7 +9,7 @@ let pokemonList = [
 
 
 
-];/*
+];
 
 // code for loop to list pokemon and height 
 /*
@@ -22,6 +22,18 @@ for (let i=0; i < pokemonList.length; i++){
     }
 } */
 
+pokemonList.forEach(function(pokemon) {
+    document.write(`${pokemon.name} (height ${pokemon.height})`);
+    if (pokemon.height > 1.7) {
+        document.write(" - Wow, that's big! <br>");
+    }else {
+        document.write("<br>");
+    }
+});
+
+
+
+/* // IIFE for pokemonList array
 let pokemonRepository = (function () {
     let pokemonList = [
         {name: 'Bulbasaur', height: 0.7, type: ['grass', 'poison']},
@@ -48,3 +60,4 @@ let pokemonRepository = (function () {
 console.log(pokemonRepository.getAll());
 pokemonRepository.add ({name: 'Pikachu', height: 1.4, type: ['electric'] });
 console.log(pokemonRepository.getAll());
+*/
