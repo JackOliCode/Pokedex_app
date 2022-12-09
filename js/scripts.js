@@ -33,7 +33,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 });*/
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(`${pokemon.name} (height ${pokemon.height})`);
     let pokemonul = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
