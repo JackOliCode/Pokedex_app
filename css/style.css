@@ -57,10 +57,12 @@ h1 {
 	background-color: var(--pokemon-red);
 	text-decoration: none;
 	padding: 5px;
-	width: 10%;
+	width: 100%;
 	margin: 5px;
 }
 ul {
 	list-style: none;
 	padding: 0%;
+	min-width: fit-content;
+	max-width: 10vw;
 }
