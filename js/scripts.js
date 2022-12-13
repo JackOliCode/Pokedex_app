@@ -45,6 +45,19 @@ let pokemonRepository = (function () {
         })   
     }
 
+    function loadDetails(item) {
+        let url = item.detailsUrl;
+        return fetch(url).then(function (response) {
+            return response.json();
+        }).then(function (details) { // now add details to the item
+            item.imageUrl = details.sprites.front_default;
+            item.height = details.height;
+            item.types = details.types;
+        }).catch(function (e) {
+            console.error (e);
+        });
+    }
+
     return {
         add: add,
         getAll: getAll,
