@@ -53,16 +53,10 @@ let pokemonRepository = (function () {
     };
 })();
 
-/*update forEach loop using key to access IIFE
-pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(`${pokemon.name} (height ${pokemon.height})`);
-    if (pokemon.height > 1.7) {
-        document.write(" - Wow, that's big! <br>");
-    }else {
-        document.write("<br>");
-    }
-});*/
+// Outside the IIFE
 
+pokemonRepository.loadList().then(function() { // data is loaded
 pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
+    });
 });
