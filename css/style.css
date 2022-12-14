@@ -49,6 +49,11 @@ h1 {
 	top: 100%;
 	border-top: 5px solid var(--border-yellow);
 }
+.pokemon-list-container {
+	width: auto;
+	margin: 25%;
+	margin-top: 0;
+}
 
 .button-class {
 	outline: 1px solid var(--border-yellow);
@@ -56,13 +61,12 @@ h1 {
 	font-family: inherit;
 	background-color: var(--pokemon-red);
 	text-decoration: none;
-	padding: 5px;
+	padding: 15px;
 	width: 100%;
 	margin: 5px;
+	border-radius: 10px;
 }
 ul {
 	list-style: none;
 	padding: 0%;
-	min-width: fit-content;
-	max-width: 10vw;
 }
