@@ -37,7 +37,7 @@ h1 {
 	padding: 20px;
 	margin: 0;
 	border-bottom: 5px solid var(--border-yellow);
-	background: var(--pokemon-red);
+	background: linear-gradient(138deg, var(--pokemon-red), var(--border-yellow), var(--pokemon-red));
 	border-bottom-left-radius: 30%;
 	justify-content: center;
 }
@@ -60,7 +60,7 @@ h1 {
 	outline: 1px solid var(--border-yellow);
 	border: none;
 	font-family: inherit;
-	background-color: var(--pokemon-red);
+	background: linear-gradient(90deg, #c1000d, #ff0314, #c1000d);
 	text-decoration: none;
 	padding: 15px;
 	width: 100%;
