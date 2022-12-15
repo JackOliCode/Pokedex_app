@@ -24,6 +24,7 @@ body {
 
 h1 {
     font-family: 'Exo', sans-serif;
+	font-size: 50px;
 }
  
 .main-container {
@@ -34,7 +35,7 @@ h1 {
     clear: both;
 	display: flex;
 	width: 100%;
-	padding: 20px;
+	padding: 0px;
 	margin: 0;
 	border-bottom: 5px solid var(--border-yellow);
 	background: linear-gradient(138deg, var(--pokemon-red), var(--border-yellow), var(--pokemon-red));
