@@ -39,6 +39,7 @@ h1 {
 	border-bottom: 5px solid var(--border-yellow);
 	background: var(--pokemon-red);
 	border-bottom-left-radius: 30%;
+	justify-content: center;
 }
 
 .page-footer {
