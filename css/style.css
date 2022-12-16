@@ -59,6 +59,7 @@ h1 {
 	left: 0;
 	overflow: auto;
 }
+/* start of styling for button/pokemonList*/
 
 .button-class {
 	outline: 1px solid var(--border-yellow);
@@ -77,4 +78,21 @@ ul {
 	width: 50%;
 	margin: 25%;
 	margin-top: 0;
+}
+
+/* Modal Styline */
+
+#modal-container.is-visible {
+	position: fixed;
+	padding: 20px;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	overflow: auto;
+	display: grid;
+	text-align: center;
 }
