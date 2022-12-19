@@ -105,5 +105,30 @@ ul {
 	padding: 15px;
 	width: 100%;
 	max-width: 700px;
-	text-align: left;
+	text-align: center;
+  }
+
+  .modal-close {
+	float: right;
+	border: 0;
+	background: var(--border-yellow);
+	color: var(--pokemon-blue);
+	text-decoration: none;
+  }
+
+  .modal h1 {
+	margin: 0;
+	font-variant: small-caps;
+  }
+  
+  .modal p {
+	margin: 0;
+  }
+
+  #modal-container {
+	display: none;
+  }
+
+  .pkmn-image-class {
+	width: 30%;
   }
