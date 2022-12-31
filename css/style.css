@@ -62,8 +62,7 @@ h1 {
 /* start of styling for button/pokemonList*/
 
 .button-class {
-	outline: 1px solid var(--border-yellow);
-	border: none;
+	border: 3px solid var(--border-yellow);
 	font-family: inherit;
 	background: linear-gradient(90deg, #c1000d, #ff0314, #c1000d);
 	text-decoration: none;
@@ -83,9 +82,6 @@ ul {
 /* Modal Styline */
 
 
-.modal-title {
-	text-align: center;
-}
 
 .modal-header {
 	background-color: var(--pokemon-red);
@@ -106,4 +102,10 @@ ul {
 
   .pkmn-image-class {
 	width: 30%;
+  }
+
+  .list-group-item {
+	padding: 0%;
+	background-color: none;
+	border: none;
   }
