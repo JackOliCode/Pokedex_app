@@ -82,39 +82,14 @@ ul {
 
 /* Modal Styline */
 
-#modal-container.is-visible {
-	position: fixed;
-	padding: 20px;
-	box-sizing: border-box;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 999;
-	overflow: auto;
-	display: grid;
+
+.modal-title {
 	text-align: center;
 }
 
-.modal {
-	margin: auto;
-	display: inline-block;
-	box-sizing: border-box;
-	background: #fff;
-	padding: 15px;
-	width: 100%;
-	max-width: 700px;
-	text-align: center;
-  }
-
-  .modal-close {
-	float: right;
-	border: 0;
-	background: var(--border-yellow);
-	color: var(--pokemon-blue);
-	text-decoration: none;
-  }
+.modal-header {
+	background-color: var(--pokemon-red);
+}
 
   .modal h1 {
 	margin: 0;
