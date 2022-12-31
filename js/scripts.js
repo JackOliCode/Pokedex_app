@@ -3,6 +3,8 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+    let pokemonListElement = $('.pokemon-list');
+    
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
@@ -11,7 +13,8 @@ let pokemonRepository = (function () {
         return pokemonList
     }
 
-    function addListItem(pokemon) {
+    /*previous addList item
+        function addListItem(pokemon) {
         let pokemonul = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         let button = document.createElement('button');
@@ -22,7 +25,24 @@ let pokemonRepository = (function () {
         button.addEventListener('click', function(event) {
             showDetails(pokemon);
         });
-    }
+    }*/
+
+    function addListItem(pokemon) {
+        //creating a list item (pokemons) with a button
+        let listItem = $('<li class="list-group-item"></li>');
+        let button = $(
+          '<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' +
+            pokemon.name +
+            '</button>'
+        );
+        // add button to list item and add item(pokemon) to the pokemon list elements in index.html
+        listItem.append(button);
+        pokemonListElement.append(listItem);
+        // listens to clicks on pokemon button to show more details
+        button.on('click', function () {
+          showDetails(pokemon);
+        });
+      }
 
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
@@ -63,7 +83,7 @@ let pokemonRepository = (function () {
         });
     }
 
-    //modal function//
+    /*modal function//
     function showModal(pokemon) {
         let modalContainer = document.querySelector('#modal-container');
         modalContainer.classList.add('is-visible');
@@ -124,7 +144,32 @@ let pokemonRepository = (function () {
         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
           hideModal();  
         }
-      });
+      });*/
+
+      function showModal(item) {
+        let modalBody = $(".modal-body"); // define variables
+        let modalTitle = $(".modal-title");
+
+        modalTitle.empty();
+        modalBody.empty(); //clear existing content of modal
+
+        //creating element for name
+        let nameElement = $("<h1>" + item.name + "</h1>");
+        //creating image element
+        let imageElement = $('<img class="modal-img">');
+        imageElement.attr("src", item.imageUrl);
+        //creating height element
+        let heightElement = $("<p>" + "Height: " + item.height + "</p>");
+        //creating type element
+        let typeElement = $("<p>" + "Type(s): " + item.types + "</p>");
+
+        //append to parent elements
+        modalTitle.append(nameElement);
+        modalBody.append(imageElement);
+        modalBody.append(heightElement);
+        modalBody.append(typeElement);
+      }
+
 
     return {
         add: add,
