@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-    let pokemonListElement = $('.pokemon-list');
+    let pokemonListElement = $('.pokemon-list'); // replaced let pokemonul = document.querySelector('.pokemon-list');
     
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -27,13 +27,14 @@ let pokemonRepository = (function () {
         });
     }*/
 
+    
+
     function addListItem(pokemon) {
         //creating a list item (pokemons) with a button
-        let listItem = $('<li class="list-group-item"></li>');
-        let button = $(
-          '<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' +
-            pokemon.name +
-            '</button>'
+        let listItem = $('<li></li>');
+        listItem.addClass('list-group-item');
+        let button = $('<button type="button" class="button-class btn btn-primary" data-target="#pokemon-modal" data-toggle="modal">' +
+            pokemon.name + '</button>'
         );
         // add button to list item and add item(pokemon) to the pokemon list elements in index.html
         listItem.append(button);
