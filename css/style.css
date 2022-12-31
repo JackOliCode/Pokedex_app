@@ -126,4 +126,6 @@ ul {
 	border: none;
   }
 
- 
+ .modal-content {
+	border: none;
+ }
