@@ -11,23 +11,7 @@ let pokemonRepository = (function () {
     
     function getAll() {
         return pokemonList
-    }
-
-    /*previous addList item
-        function addListItem(pokemon) {
-        let pokemonul = document.querySelector('.pokemon-list');
-        let listItem = document.createElement('li');
-        let button = document.createElement('button');
-        button.innerText = pokemon.name;
-        button.classList.add('button-class');
-        listItem.appendChild(button);
-        pokemonul.appendChild(listItem);
-        button.addEventListener('click', function(event) {
-            showDetails(pokemon);
-        });
-    }*/
-
-    
+    }   
 
     function addListItem(pokemon) {
         //creating a list item (pokemons) with a button
@@ -83,69 +67,6 @@ let pokemonRepository = (function () {
             console.error (e);
         });
     }
-
-    /*modal function//
-    function showModal(pokemon) {
-        let modalContainer = document.querySelector('#modal-container');
-        modalContainer.classList.add('is-visible');
-    //clear all existing modal content//
-        modalContainer.innerHTML = ' ';
-     //create modal div and add modal class
-        let modal = document.createElement('div');
-        modal.classList.add('modal');
-    //close button element
-        let closeButtonElement = document.createElement('button');
-        closeButtonElement.classList.add('modal-close');
-        closeButtonElement.innerText = 'X';
-        closeButtonElement.addEventListener('click', hideModal);
-
-    //add pkmnImageElement for img of pokemon (img)
-        let pkmnImageElement = document.createElement('img');
-        pkmnImageElement.classList.add('pkmn-image-class')
-        pkmnImageElement.src = pokemon.imageUrl;
-
-    // add pkmnNameElement for pokemon.name (h1)
-        let pkmnNameElement = document.createElement('h1');
-        pkmnNameElement.innerText = pokemon.name;
-  
-    // add pkmnTypesElement for pokemon.types (p)
-        let pkmnTypesElement = document.createElement('p');
-        pkmnTypesElement.innerText = 'Type: ' + pokemon.types
-
-    // add pkmnHeightElement for pokemon.height (p)
-        let pkmnHeightElement = document.createElement('p');
-        pkmnHeightElement.innerText = 'Height: ' + pokemon.height;
-
-    //append the elements to parent element modal
-        modal.appendChild(closeButtonElement);
-        modal.appendChild(pkmnImageElement);
-        modal.appendChild(pkmnNameElement);
-        modal.appendChild(pkmnTypesElement);
-        modal.appendChild(pkmnHeightElement);
-        modalContainer.appendChild(modal);
-
-    // add event.Listener for clicking outside modal to hideModal
-        modalContainer.addEventListener('click', (e) => {
-        // Since this is also triggered when clicking INSIDE the modal
-        // We only want to close if the user clicks directly on the overlay
-        let target = e.target;
-        if (target === modalContainer) {
-          hideModal();
-        }
-      });
-    };
-
-    function hideModal() {
-        let modalContainer = document.querySelector('#modal-container');
-        modalContainer.classList.remove('is-visible');
-    }
-
-    window.addEventListener('keydown', (e) => {
-        let modalContainer = document.querySelector('#modal-container');
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-          hideModal();  
-        }
-      });*/
 
       function showModal(item) {
         let modalBody = $(".modal-body"); // define variables
