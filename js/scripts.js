@@ -86,7 +86,7 @@ let pokemonRepository = (function () {
         let typeElement = $("<p>" + "Type(s): " + item.types + "</p>");
 
         //append to parent elements
-        modalTitle.append(nameElement);
+        modalTitle.text(nameElement);
         modalBody.append(imageElement);
         modalBody.append(heightElement);
         modalBody.append(typeElement);
