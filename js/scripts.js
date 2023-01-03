@@ -71,6 +71,7 @@ let pokemonRepository = (function () {
       .then(function (details) {
         // now add details to the item
         item.imageUrl = details.sprites.front_default;
+        item.imageUrlBack = details.sprites.back_default;
         item.height = details.height;
         item.types = [];
         for (let index = 0; index < details.types.length; index++) {
@@ -89,19 +90,20 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty(); //clear existing content of modal
 
-    //creating element for name
-    let nameElement = $('<h1>' + item.name + '</h1>');
     //creating image element
     let imageElement = $('<img class="modal-img">');
     imageElement.attr('src', item.imageUrl);
+    let imageElementBack = $('<img class="modal-img">');
+    imageElementBack.attr('src', item.imageUrlBack);
     //creating height element
     let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
     //creating type element
     let typeElement = $('<p>' + 'Type(s): ' + item.types + '</p>');
 
     //append to parent elements
-    modalTitle.text(nameElement);
+    modalTitle.text(item.name);
     modalBody.append(imageElement);
+    modalBody.append(imageElementBack);
     modalBody.append(heightElement);
     modalBody.append(typeElement);
   }
