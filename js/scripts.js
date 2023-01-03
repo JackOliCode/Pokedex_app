@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // IIFE for pokemonList array
 let pokemonRepository = (function () {
   let pokemonList = [];
