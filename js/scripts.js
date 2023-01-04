@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
         //.json() is another promise and the parsed info given to json parameter
         json.results.forEach(function (item) {
           //forEach fuction for json parameter (which is the pulled info from api) given to parameter item
-          let = pokemon = {
+          let pokemon = {
             // new object
             name: item.name,
             detailsUrl: item.url,
