@@ -93,6 +93,7 @@ let pokemonRepository = (function () {
     modalBody.empty(); //clear existing content of modal
     modalType.empty();
 
+    let titleElement = $('<b>' + item.name + '</b>');
     //creating image element
     let imageElement = $('<img class="modal-img">');
     imageElement.attr('src', item.imageUrl);
@@ -103,10 +104,10 @@ let pokemonRepository = (function () {
     //creating weight element
     let weightElement = $('<p>' + 'Weight: ' + item.weight + 'kg' + '</p>');
     //creating type element
-    let typeElement = $('<p>' + 'Type(s): ' + item.types + '</p>');
+    let typeElement = $('<b>' + item.types + ' type Pokemon' + '</b>');
 
     //append to parent elements
-    modalTitle.text(item.name);
+    modalTitle.append(titleElement);
     modalType.append(typeElement);
     modalBody.append(imageElement);
     modalBody.append(imageElementBack);
