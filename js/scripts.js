@@ -73,7 +73,7 @@ let pokemonRepository = (function () {
         item.imageUrl = details.sprites.front_default;
         item.imageUrlBack = details.sprites.back_default;
         item.weight = details.weight / 10;
-        item.height = details.height;
+        item.height = details.height / 10;
         item.types = [];
         for (let index = 0; index < details.types.length; index++) {
           item.types.push(details.types[index].type.name);
@@ -100,7 +100,7 @@ let pokemonRepository = (function () {
     let imageElementBack = $('<img class="modal-img">');
     imageElementBack.attr('src', item.imageUrlBack);
     //creating height element
-    let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
+    let heightElement = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
     //creating weight element
     let weightElement = $('<p>' + 'Weight: ' + item.weight + 'kg' + '</p>');
     //creating type element
