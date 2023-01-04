@@ -167,3 +167,11 @@ ul {
  }
 
 
+/*-------------------media query---------------------*/
+
+@media all and (max-width: 380px) {
+	.pokeball-container {
+		visibility: hidden;
+		width: 0rem;
+	}
+}
