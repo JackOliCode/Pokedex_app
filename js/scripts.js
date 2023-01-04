@@ -20,7 +20,9 @@ let pokemonRepository = (function () {
     listItem.addClass('group-list-item');
     let button = $(
       '<button type="button" class="button-class btn btn-primary" data-target="#pokemon-modal" data-toggle="modal">' +
+        '<div class="pokeball-container"> <img src="img/pokeball.svg" class="pokeball-img" /> </div>' +
         pokemon.name +
+        '<div class="pokeball-container"> <img src="img/pokeball.svg" class="pokeball-img" /> </div>' +
         '</button>'
     );
     // add button to list item and add item(pokemon) to the pokemon list elements in index.html
