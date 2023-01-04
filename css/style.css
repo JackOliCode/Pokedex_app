@@ -78,6 +78,8 @@ img {
 	margin: 5px;
 	border-radius: 10px;
 	text-transform: capitalize;
+	display: grid; /* grid to evenly space pokeball-name-pokeball */
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
 .button-class::before {
@@ -158,4 +160,10 @@ ul {
 	text-transform: capitalize;
  }
 
- 
+ .pokeball-img {
+	width: 30px;
+	margin: 0;
+	
+ }
+
+
