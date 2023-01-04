@@ -109,7 +109,6 @@ ul {
 
   .modal p {
 	margin: 0;
-	text-align: left;
   }
 
   #modal-container {
@@ -128,4 +127,11 @@ ul {
 
  .modal-content {
 	border: none;
+ }
+
+ .modal-type {
+	padding: 1rem;
+	background-color: var(--border-yellow);
+	text-align: left;
+	text-transform: capitalize;
  }
