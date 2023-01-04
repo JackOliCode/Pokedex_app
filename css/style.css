@@ -69,7 +69,9 @@ img {
 .button-class {
 	border: 3px solid var(--border-yellow);
 	font-family: inherit;
-	background: linear-gradient(90deg, #c1000d, #ff0314, #c1000d);
+	position: relative;
+	background-image: linear-gradient(90deg, #c1000d, #ff0314, #c1000d);
+	z-index: 1;
 	text-decoration: none;
 	padding: 15px;
 	width: 100%;
@@ -77,6 +79,28 @@ img {
 	border-radius: 10px;
 	text-transform: capitalize;
 }
+
+.button-class::before {
+	position: absolute;
+  	content: "";
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+	background-image: linear-gradient(90deg, var(--border-yellow), #ff0314, var(--border-yellow));
+	z-index: -1;
+	transition: all 0.5s linear;
+	opacity: 0;
+	border-radius: 10px;
+
+}
+
+.button-class:hover::before {
+	opacity: 1;
+	box-shadow: 0 3px 40px 0 var(--border-yellow);
+	outline: 3px solid var(--pokemon-blue);
+ }
+
 ul {
 	list-style: none;
 	padding: 0%;
@@ -88,7 +112,6 @@ ul {
 /* Modal Styline */
 
 
-
 .modal-header {
 	background-color: var(--pokemon-red);
 	justify-content: center;
@@ -98,7 +121,7 @@ ul {
 	justify-content: center;
 }
 
-  .modal h1 {
+.modal h1 {
 	margin: 0;
 	font-variant: small-caps;
   }
@@ -121,13 +144,12 @@ ul {
 
   .list-group-item {
 	padding: 0%;
-	background-color: none;
 	border: none;
   }
 
  .modal-content {
 	border: none;
- }
+ }		
 
  .modal-type {
 	padding: 1rem;
@@ -135,3 +157,5 @@ ul {
 	text-align: left;
 	text-transform: capitalize;
  }
+
+ 
